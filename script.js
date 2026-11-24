@@ -133,7 +133,7 @@ function showResult() {
   else if (score >= 80) title = 'Цифровой эксперт';
   else if (score >= 60) title = 'Страж Интернета';
   else if (score >= 40) title = 'Исследователь сети';
-  result.innerHTML = `<img src="assets/images/certificate.svg" alt="Награда за завершение теста"><p class="quiz-overline">ТВОЙ РЕЗУЛЬТАТ</p><h3>Отличная работа!</h3><div class="result-score">${score}<small> / 100</small></div><div class="result-stats"><span>✓ ${correctCount} правильных</span><span>↗ ${round.length - correctCount} неправильных</span></div><div class="result-badge">✦ ${title}</div><p>Знания помогают замечать риски и поддерживать безопасную атмосферу в сети.</p><div class="result-actions"><button class="button button-primary" type="button" id="retry-quiz">Пройти заново <span>↻</span></button><a class="button button-outline" href="#top">Вернуться к плакату <span>↑</span></a></div>`;
+  result.innerHTML = `<img src="assets/images/certificate.svg" alt="Награда за завершение теста"><p class="quiz-overline">ТВОЙ РЕЗУЛЬТАТ</p><h3>Отличная работа!</h3><div class="result-score">${score}<small> / 100</small></div><div class="result-stats"><span>✓ ${correctCount} правильных</span><span>↗ ${round.length - correctCount} неправильных</span></div><div class="result-badge">✦ ${title}</div><p>Знания помогают замечать риски и поддерживать безопасную атмосферу в сети.</p><div class="result-actions"><button class="button button-primary" type="button" id="retry-quiz">Пройти заново <span>↻</span></button><a class="button button-outline" href="index.html">Вернуться к плакату <span>↑</span></a></div>`;
   $('#retry-quiz', result).addEventListener('click', beginQuiz);
   result.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
