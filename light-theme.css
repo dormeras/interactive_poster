@@ -32,3 +32,42 @@ html{scrollbar-color:#b6c2b9 #eeede7}body{background:var(--bg);color:var(--text)
 @media(max-width:1050px){.home-main{width:min(1020px,92vw);padding-block:42px;justify-content:flex-start}.topic-grid{gap:14px}.topic-tile{min-height:180px;border-radius:15px;padding:18px}.tile-heading{min-height:59px;gap:10px}.tile-heading img{width:59px;height:59px;flex-basis:59px}.topic-tile b{font-size:16px}.topic-tile>span:last-of-type{font-size:12px}.topic-n{right:14px;top:12px}}
 @media(max-width:700px){.home-main{width:min(620px,90vw);min-height:100svh;padding:38px 0 46px;gap:30px}.home-intro h1{font-size:clamp(42px,11vw,58px);letter-spacing:-2.3px}.home-intro p:last-child{margin-top:16px;font-size:16px}.topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.topic-tile{min-height:0;border-radius:14px;padding:16px}.tile-heading{min-height:57px;gap:9px;padding-right:15px}.tile-heading img{width:55px;height:55px;flex-basis:55px}.topic-tile b{font-size:15px;line-height:1.15}.topic-tile>span:last-of-type{max-width:100%;font-size:11px;line-height:1.4}.topic-tile i{width:29px;height:29px;font-size:16px}.topic-n{right:12px;top:10px;font-size:9px}}
 @media(max-width:390px){.home-main{width:92vw;padding-top:28px;gap:24px}.home-kicker{font-size:8px;margin-bottom:10px}.home-intro h1{font-size:38px}.home-intro p:last-child{font-size:14px}.topic-grid{gap:9px}.topic-tile{padding:13px;border-radius:12px}.tile-heading{min-height:47px;gap:6px}.tile-heading img{width:45px;height:45px;flex-basis:45px}.topic-tile b{font-size:13px}.topic-tile>span:last-of-type{font-size:10px}.topic-tile i{width:26px;height:26px;font-size:14px}}
+
+/* Тематические страницы: учебный материал и навигация между темами. */
+.detail-page{min-height:100vh;background:radial-gradient(circle at 88% 12%,#e8efe9 0,transparent 25%),#f3f2ec}
+.detail-header{height:auto;min-height:0;padding:22px max(6vw,calc((100% - 1040px)/2));background:transparent;border:0}
+.detail-header .back-home{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 19px;border:1px solid #9caea5;border-radius:10px;background:#fffefa;color:#315b5d;font-size:13px;font-weight:700;box-shadow:0 3px 9px rgba(45,63,54,.07);transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
+.detail-header .back-home:hover{background:#e6f0ea;transform:translateX(-3px);box-shadow:0 7px 16px rgba(45,63,54,.12)}
+.detail-main{width:min(1040px,88vw);padding:15px 0 72px}
+.detail-main>.back-link{display:none}
+.detail-hero{grid-template-columns:1fr 225px;gap:48px;padding:30px 0 36px;border-bottom:0}
+.detail-hero .eyebrow{display:inline-block;margin:0 0 12px;color:#527d6c;font-size:10px;letter-spacing:1.4px}
+.detail-hero h1{max-width:720px;margin:0 0 19px;font-size:clamp(38px,4.4vw,60px);line-height:1.04;letter-spacing:-2.4px}
+.detail-lead{max-width:700px;margin:0;font-size:16px;line-height:1.75}
+.detail-hero img{width:100%;max-width:220px;height:210px;justify-self:end;filter:saturate(.72)}
+.detail-grid{grid-template-columns:minmax(0,1.55fr) minmax(255px,.75fr);gap:28px;padding-top:0;align-items:start}
+.detail-grid>div:first-child{background:#fffefa;border:1px solid #d8ddd6;border-radius:18px;padding:clamp(26px,3.4vw,44px);box-shadow:0 12px 28px rgba(42,60,51,.08)}
+.topic-info{position:relative;margin:0;padding:0 0 28px 22px}
+.topic-info:not(:last-child){margin-bottom:29px;border-bottom:1px solid #dde2dc}
+.topic-info::before{content:'';position:absolute;top:3px;bottom:28px;left:0;width:4px;border-radius:4px;background:#6c9881}
+.topic-info:last-child::before{bottom:0}
+.topic-info h2{margin:0 0 17px;color:#253a3c;font-size:clamp(19px,2vw,25px);line-height:1.25}
+.topic-info ul{gap:12px}
+.topic-info li{padding-left:25px;font-size:14px;line-height:1.62}
+.topic-info li::before{content:'✓';top:0;color:#4f8069;font-weight:800;font-size:13px}
+.detail-aside{padding:23px;border:1px solid #cbd7cf;border-radius:16px;background:#f8fbf7;box-shadow:0 8px 22px rgba(42,60,51,.06)}
+.detail-aside>span{display:block;margin-bottom:11px;color:#527d6c;font-size:10px;letter-spacing:1.2px}
+.detail-aside>p{margin:0 0 19px;color:#34494a;font-size:14px;line-height:1.65}
+.example-box{margin:0 0 20px;padding:16px;border:0;border-left:4px solid #6c9881;border-radius:0 9px 9px 0;background:#e7f0e9}
+.example-box>b{font-size:9px;color:#4b7564;letter-spacing:1px}
+.example-box p{margin:7px 0 0;font-size:12px;line-height:1.6;color:#3d5551}
+.detail-aside .button{min-height:48px;margin:0;border-radius:9px;font-size:12px}
+.detail-pagination{display:flex;min-height:58px;gap:16px;margin-top:33px;padding:0;border:0}
+.detail-pagination a{flex:1;min-height:58px;padding:14px 19px;display:flex;align-items:center;justify-content:center;border-radius:11px;background:#426f73;color:#fffefa;font-size:13px;font-weight:700;box-shadow:0 6px 13px rgba(48,77,75,.14);transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
+.detail-pagination a:first-child{justify-content:flex-start;background:#e2ede6;color:#365e50;box-shadow:none}
+.detail-pagination a:last-child{justify-content:flex-end}
+.detail-pagination a:hover{background:#315b5d;color:#fffefa;transform:translateY(-3px);box-shadow:0 11px 18px rgba(48,77,75,.18)}
+.detail-pagination a:first-child:hover{background:#cfe0d4;color:#294d40}
+.detail-pagination:empty{display:none}
+.detail-footer{display:none}
+@media(max-width:720px){.detail-header{padding:18px 5vw}.detail-header .back-home{width:100%;min-height:48px}.detail-main{width:90vw;padding:10px 0 44px}.detail-hero{grid-template-columns:1fr;gap:10px;padding:20px 0 27px}.detail-hero h1{font-size:clamp(36px,10vw,48px);letter-spacing:-1.6px}.detail-lead{font-size:15px;line-height:1.65}.detail-hero img{display:none}.detail-grid{grid-template-columns:1fr;gap:18px}.detail-grid>div:first-child{padding:24px 20px;border-radius:15px;order:1}.detail-aside{position:static;padding:20px;order:2}.topic-info{padding-left:18px}.topic-info h2{font-size:20px}.topic-info li{padding-left:21px;font-size:13px}.detail-pagination{margin-top:23px;gap:10px;flex-direction:column}.detail-pagination a,.detail-pagination a:first-child,.detail-pagination a:last-child{justify-content:center;min-height:54px;text-align:center}.detail-pagination a:only-child{width:100%}}
